@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
-public class MyDbHandler extends SQLiteOpenHelper {
+public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "user.db";
     public static final String USER = "user";
@@ -17,7 +17,7 @@ public class MyDbHandler extends SQLiteOpenHelper {
     public static final String COLUMN_DESCRIPTION = "description";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_FOLLOWED = "followed";
-    public MyDbHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
+    public DatabaseHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
     {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }

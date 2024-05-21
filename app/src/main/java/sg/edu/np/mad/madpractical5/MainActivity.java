@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void updateUser(User user){
-        MyDbHandler dbHandler = new MyDbHandler(this,null,null,1);
+        DatabaseHandler dbHandler = new DatabaseHandler(this,null,null,1);
         dbHandler.updateUser(user);
     }
 }

@@ -86,17 +86,17 @@ public class ListActivity extends AppCompatActivity implements clickListener  {
     }
 
     public void initUser(ArrayList<User> userList){
-        MyDbHandler dbhandler = new MyDbHandler(this,null,null,1);
+        DatabaseHandler dbhandler = new DatabaseHandler(this,null,null,1);
         dbhandler.initUser(userList);
     }
 
     public ArrayList<User> getAllUser(){
-        MyDbHandler dbHandler = new MyDbHandler(this,null,null,1);
+        DatabaseHandler dbHandler = new DatabaseHandler(this,null,null,1);
         return dbHandler.getUser();
     }
 
     public boolean checkDb(){
-        MyDbHandler dbHandler = new MyDbHandler(this,null,null,1);
+        DatabaseHandler dbHandler = new DatabaseHandler(this,null,null,1);
         return dbHandler.checkDb();
 
     }

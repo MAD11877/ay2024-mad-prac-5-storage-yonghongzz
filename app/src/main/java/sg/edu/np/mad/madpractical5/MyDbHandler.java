@@ -1,4 +1,4 @@
-package sg.edu.np.mad.myapplication;
+package sg.edu.np.mad.madpractical5;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MyDbHandler extends SQLiteOpenHelper {
@@ -71,7 +70,8 @@ public class MyDbHandler extends SQLiteOpenHelper {
         values.put(COLUMN_ID,String.valueOf(user.getId()));
         values.put(COLUMN_NAME,String.valueOf(user.getName()));
         values.put(COLUMN_DESCRIPTION,String.valueOf(user.getDescription()));
-        values.put(COLUMN_FOLLOWED,String.valueOf(user.getFollowed()));
+        int isFollowedInt = user.getFollowed() ? 1 : 0;
+        values.put(COLUMN_FOLLOWED,String.valueOf(isFollowedInt));
         String clause = "id=?";
         String[] args = {String.valueOf(user.getId())};
         db.update(USER,values,clause,args);

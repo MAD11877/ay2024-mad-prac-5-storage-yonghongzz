@@ -1,6 +1,4 @@
-package sg.edu.np.mad.myapplication;
-
-import android.widget.AdapterView;
+package sg.edu.np.mad.madpractical5;
 
 public interface clickListener {
     void onImageClick(int position);

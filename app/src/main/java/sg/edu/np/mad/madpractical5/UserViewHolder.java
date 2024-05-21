@@ -1,10 +1,9 @@
-package sg.edu.np.mad.myapplication;
+package sg.edu.np.mad.madpractical5;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class UserViewHolder extends RecyclerView.ViewHolder {
